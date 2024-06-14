@@ -1,6 +1,7 @@
 import {Route, Routes} from "react-router-dom"
 import {Navigate} from "react-router-dom";
 import Home from "./Container/Home";
+// import  Signup  from "./Container/Signup";
 import './App.css'
 
 function App() {
@@ -12,8 +13,10 @@ function App() {
       <Routes>
         <Route path="/home/*" element=
         {<Home />} />
+      
         <Route path="*" element={<Navigate to={"/home"}/>}/>
       </Routes>
+      
     </div>
   );
 }

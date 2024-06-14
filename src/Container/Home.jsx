@@ -5,6 +5,7 @@ import { FaSistrix } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {Route, Routes} from "react-router-dom";
+import {Projects, Signup} from "../Container";
 const Home = () => {
   const [isSideMenu, setIsSideMenu] = useState(false);
   const [user, setUser] = useState(null);
@@ -60,7 +61,7 @@ const Home = () => {
              {!user &&(
               <motion.div  whileTap ={{scale:0.9}} className="flex items-center justify-center gap-3">
                 <Link to={"/home/auth"} className="bg-emerald-500 px-6 py-2 rounded-md text-white text-lg cursor:pointer  hover:bg-emerald-700">
-                SignUp
+                Signup
                 </Link>
               </motion.div>
              )}
@@ -71,10 +72,12 @@ const Home = () => {
         <div className="w-full">
             <Routes>
                 <Route path="/*" elements="{<Projects />}"/>
-                <Route path="/auth" elements="{<Sign Up />}"/>
+                <Route path="/auth" elements="{<Signup />}"/> 
             </Routes>
-        </div>
-
+       </div>
+               <Signup/>
+         <Projects/> 
+              
         </div>
       
     </>
