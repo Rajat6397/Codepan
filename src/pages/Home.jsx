@@ -31,7 +31,6 @@ const Home = () => {
 
   return (
     <>
-    <h1 className="text-blue-400">Hello</h1>
       <div 
         className={`flex ${isSlideMenu ? "w-2" : "flex-[.3] xl:flex-[.2]"}
          min-h-screen max-h-screen relative bg-secondary px-3 py-6 flex-col items-center justify-start gap-4 transition-all duration-200 ease-in-out `}
@@ -62,7 +61,7 @@ const Home = () => {
           </Link>
           <Link to={"/newProjects"}>
             <div className="px-6 py-3 flex items-center justify-center  rounded-xl  cursor-pointer">
-              <button id="strtbtn" className="text-gray-200 hover:text-gray-400 capitalize xl:text-2xl mt-10">
+              <button id="strtbtn" className="text-gray-200 capitalize xl:text-2xl mt-10">
                 <b>Start Coding</b>
               </button>
          

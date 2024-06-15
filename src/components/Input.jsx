@@ -16,7 +16,8 @@ const Input = ({
 
   useEffect(() => {
     if (placeholder === "Email") {
-      const isValid = validateEmail(value);
+      // const isValid = validateEmail(value);
+      const isValid=true
       setEmailIsValid(isValid);
       setGetEmailValidation(isValid);
     }

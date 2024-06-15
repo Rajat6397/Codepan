@@ -20,7 +20,7 @@ import { fadeInOut } from "../animation";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const [emailValidation, setEmailValidation] = useState(false);
+  const [emailValidation, setEmailValidation] = useState(true);
   const [isLogin, setIsLogin] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
@@ -36,6 +36,7 @@ const Signup = () => {
   // };
 
   const createNewUser = async () => {
+    console.log(email, pass);
     if (emailValidation) {
       try {
         const res = await createUserWithEmailAndPassword(auth, email, pass);
@@ -53,6 +54,7 @@ const Signup = () => {
           });
         console.log(res);
       } catch (error) {
+        console.log(error);
         // errorNotification("Enter valid Email or Passsword");
         toast.error('Enter valid Email or Passsword', {
           position: "top-center",
